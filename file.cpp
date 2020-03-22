@@ -22,7 +22,21 @@ int main() { // The main function
     // Conditionals
     if (value > 20) {
         std::cout << "It's greater than the 20th!\n";
-    } else {
+    } else if (value == 0){
         std::cout << "It ain't it chief!\n";
+    } else {
+        std::cout << "The century is here, so c'mon dude!\n";
     }
+
+    switch (value)
+    {
+    case 12:
+        std::cout << "You know what you're doing my man!\n";
+        break;
+    
+    default:
+        break;
+    }
+
+    
 }
