@@ -12,6 +12,7 @@ int main() { // The main function
     std::cout << "The value of the variable is: ";
     std::cout << value;
     std::cout << "\n";
+    bool somethingwewilluselater = true;
 
     // Inputs
     std::cout << "Enter an integer value: ";
@@ -20,6 +21,8 @@ int main() { // The main function
     value += 12;
 
     // Conditionals
+    // Operators that surprisingly are still here: &&, ||, !
+    // For the operators you can actually use the words: and, or, not
     if (value > 20) {
         std::cout << "It's greater than the 20th!\n";
     } else if (value == 0){
@@ -38,5 +41,15 @@ int main() { // The main function
         break;
     }
 
+    // Loops
+    while (value > 0) 
+    {
+        std::cout << "This is the " << value << " time that this goes on!\n";
+        value--;
+    }
+
+    for (int i=0; i<20; i++) {
+        std::cout << "This is the " << i << " time that this will go on!\n";
+    }
     
 }
