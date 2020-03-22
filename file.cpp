@@ -1,5 +1,6 @@
 // Include libraries
 #include <iostream>
+#include <vector>
 
 int main() { // The main function
     // What the program actually does
@@ -52,4 +53,15 @@ int main() { // The main function
         std::cout << "This is the " << i << " time that this will go on!\n";
     }
     
+    // Vectors
+    // .push_back()
+    // .pop_back()
+    // .size()
+
+    std::vector<int> even = {2, 4, 6, 8, 10};
+
+    even.push_back(12);
+
+    std::cout << even[1] << "\n" << even.size() << "\n";
+
 }
