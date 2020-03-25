@@ -16,6 +16,15 @@ std::string degozaru(std::string phrase) {
     return phrase + "-degozaru";
 }
 
+// Reference function (the mind-blowing thing)
+// The & before the name makes that the 2 variables are linked, this can be used in every concept
+// So if one of the two changes, so does the other one
+void swap_numbers(int &str1, int &str2) {
+    int cache = str1;
+    str1 = str2;
+    str2 = cache;
+}
+
 // You can actually add a default value by assigning a value to num
 // This works when you want to make an argument optional so that is not entered every single time
 std::vector<int> quantum3(int num = 2) {
@@ -120,6 +129,30 @@ int main() { // The main function
     // . Notation (Remember to create an object)
     Computer pc;
     std::cout << pc.compute("123","121212") << "\n";
+
+    // References (this is mind-blowing)
+    int sw1 = 15;
+    int sw2 = 24;
+    swap_numbers(sw1, sw2);
+
+    std::cout << sw1 << "\n";
+    std::cout << sw2 << "\n";
+
+    // You can also use the & operator to get the position in which a variable is stored in the memory
+    std::cout << &value << "\n";
+
+    // Pointers (old-school stuff that you will most-likely not use)
+    // The * after the type marks that it's a pointer, so it points out the memory value of the variable
+    int* ptr = &value;
+    std::cout << ptr << "\n";
+
+    // But beware! NEVER point to a variable that is not initialized, it's dangerous! You might change something you didn't mean to
+    // Instead define a pointer to nullptr so that you don't get this risk, and later on when the variable has a value, use the &variable
+    int somevariable; // DONT POINT NOW
+    int* ptr2 = nullptr;
+    somevariable = 15; // Now you can
+    ptr2 = &somevariable;
+
 }
 
 // See?
