@@ -18,3 +18,37 @@ template <typename T>
 T greater (T val1, T val2) {
     val1 > val2 ? true: false;
 }
+
+// Classes
+class Computer {
+        // Variables stored in public do reset, the ones stored in private do not
+        public: // Public scope
+            // Define whatever functions or variables as you desire
+            std::string compute(std::string value1, std::string value2) {
+                std::string output = "Task has succesfully failed! Error code: " + value1 + " Please contact: " + value2 + "\n";
+                return output;
+            }
+
+            void setBrand(std::string brand);
+            std::string getBrand();
+
+        private:
+            std::string brand;
+    }; // Semicolon says: Notice me!
+
+// You can also create classes inside the headers
+// This class will also hold a constructor
+class Soil {
+    public:
+        // Constructor
+        // Constructors are literally variables since they're everythin that doesn't have a return type
+        Soil(std::string comp);
+
+        std::string getComposition();
+
+        // Destructor
+        ~Soil();
+    private:
+        std::string composition;
+};
+// Constructor in functions.cpp

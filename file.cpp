@@ -4,6 +4,7 @@
 #include <cmath>
 #include "functions.hpp"
 #include "functions.cpp"
+// Use this to avoid typing std::something... using namespace std;
 
 // To declare a function:
 // return_type function_name(parameters) {instructions}
@@ -114,6 +115,11 @@ int main() { // The main function
     std::cout << greater("Leo ", "Messi") << "\n";
     std::cout << greater(7, 14) << "\n";
     std::cout << greater(44.5, 86.7) << "\n";
+
+    // Classes (see Headers)
+    // . Notation (Remember to create an object)
+    Computer pc;
+    std::cout << pc.compute("123","121212") << "\n";
 }
 
 // See?
